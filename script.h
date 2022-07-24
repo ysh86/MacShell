@@ -1,0 +1,49 @@
+/* This file is part of MacShell. 
+ *
+ * MacShell is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY.  No author or distributor accepts
+ * responsibility to anyone for the consequences of using it or for
+ * whether it serves any particular purpose, or works at all,
+ * unless he says so in writing.
+ *
+ * Everyone is granted permission to copy and modify MacShell.  
+ *
+ * All or part of the source of MacShell may be used in other software, 
+ * provided that:
+ * 1. Such software is not sold at a cost higher than that which would 
+ * normally be necessary to recoup media duplication and distribution
+ * costs.
+ * 2. If such software is distributed, its source code must also be made 
+ * available under terms identical to those specified in this notice. 
+ * Exceptions to this rule may be granted by the author in 
+ * certain instances.  
+ *
+ * This notice must be preserved on all copies of this file. 
+ *
+ * As the author of MacShell, I would also like to request that any 
+ * modifications, extensions, or bug fixes made to this source be 
+ * forwarded back to me for possible inclusion in future versions of 
+ * MacShell.
+ * 
+ * Thanks, and happy programming!
+ * Fred Videon (fred@cs.washington.edu)
+ */
+
+/* prototypes */
+extern		updateStdio(StdioPtr stdiop,StdioPtr linestdiop);
+extern		short isCtrlFlowCmd(char **argv);
+extern		short readToTag(char *etag,char *stag,HParmBlkPtr hpbp,
+					char **llist,short *lcntp);
+extern		short isExecLine(char *line);
+extern		OSErr getDFLength(char *fname, long *lenp);
+extern		short readFile(char *fname,char **filebufp,short *lenp);
+extern		short doCtrlFlowCmd(short *startp,char **lines, StdioPtr stdiop); 
+
+#ifndef TC7
+extern		short markLines(char *fbuf,short flen,char ***lines,short *lcntp);
+extern		short setArgv(char **argv,short argc,StdioPtr stdiop); 
+extern		short doSource(short argc, char **argv, StdioPtr stdiop); 
+extern		int doRun(short argc, char **argv, StdioPtr stdiop); 
+#endif
+
+

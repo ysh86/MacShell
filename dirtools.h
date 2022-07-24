@@ -1,0 +1,42 @@
+/* This file is part of MacShell. 
+ *
+ * MacShell is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY.  No author or distributor accepts
+ * responsibility to anyone for the consequences of using it or for
+ * whether it serves any particular purpose, or works at all,
+ * unless he says so in writing.
+ *
+ * Everyone is granted permission to copy and modify MacShell.  
+ *
+ * All or part of the source of MacShell may be used in other software, 
+ * provided that:
+ * 1. Such software is not sold at a cost higher than that which would 
+ * normally be necessary to recoup media duplication and distribution
+ * costs.
+ * 2. If such software is distributed, its source code must also be made 
+ * available under terms identical to those specified in this notice. 
+ * Exceptions to this rule may be granted by the author in 
+ * certain instances.  
+ *
+ * This notice must be preserved on all copies of this file. 
+ *
+ * As the author of MacShell, I would also like to request that any 
+ * modifications, extensions, or bug fixes made to this source be 
+ * forwarded back to me for possible inclusion in future versions of 
+ * MacShell.
+ * 
+ * Thanks, and happy programming!
+ * Fred Videon (fred@cs.washington.edu)
+ */
+ 
+/* Prototypes for dirTools.c */
+extern		doLs(int argc,char **argv,StdioPtr stdiop);
+extern		listADir(long dirID, int vRef, StdioPtr stdiop,int longflag);
+extern		doCd(int argc,char **argv,StdioPtr stdiop);
+extern		getWD(StdioPtr stdiop);
+extern		int		isDir(char *fname, long wddirid, int vrefnum);
+extern		doMkdir(int argc,char **argv,StdioPtr stdiop);
+extern		longLsLine(StdioPtr stdiop,char *fname,CInfoPBPtr cpbp);
+extern		fmtDateTime(DateTimeRec *dtPtr,char *str);
+extern		OSErr checkVol(WDPBPtr wdpbp);
+
